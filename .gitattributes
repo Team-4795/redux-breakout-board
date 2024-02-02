@@ -1,0 +1,5 @@
+# these won't be auto-merged, but are text-like we can see the diffs
+*.kicad_sch	 -merge text
+*.kicad_pcb 	 -merge text
+*.kicad_pro 	 -merge text
+*.kicad_prl 	 -merge text

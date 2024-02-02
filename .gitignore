@@ -1,0 +1,54 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# kicad backups
+*-backups
+*-backups/*.zip
+
+
+# kicad Temporary files
+*.erc
+*.000
+*.bak
+*.bck
+*.kicad_pcb-bak
+*.sch-bak
+*~_autosave-*
+*.tmp
+*-save.pro
+*-save.kicad_pcb
+fp-info-cache# Netlist files (exported from Eeschema)
+*.net# Autorouter files (exported from Pcbnew)
+*.dsn
+*.ses
+*.lck
