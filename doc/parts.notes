@@ -1,0 +1,31 @@
+
+PWM-LED interface board
+
+
+cut of 3 pins worth of an old AMP-1-534237-8 strip
+a little fiddly to trim to length, but then
+fits perfectly into RoboRIO pwm
+solder tails will go through pcb, leaving a little bit of height between
+Rio surface and the pcb
+
+maybe this Molex  0901471103 DigiKey Part Number 	
+WM14830-ND
+
+
+latching output connecgtor to mate with molex SL series 3 pin
+but right angle pcb male with latching shroud
+
+Molex 0705550002 DigiKey Part Number WM4165-ND
+
+
+
+board size?
+make it possible to fit a NavX onto the roborio while using the pwm led
+interface board?
+
+onboard 12v to 5v power converter module - skip it, use external
+
+power input
+Wago Cage Clamp series 2601
+#1102  for two pole
+
