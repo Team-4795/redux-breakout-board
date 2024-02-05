@@ -1,7 +1,7 @@
 
 PWM-LED interface board
 
-
+J1, data-input connector
 cut of 3 pins worth of an old AMP-1-534237-8 strip
 a little fiddly to trim to length, but then
 fits perfectly into RoboRIO pwm
@@ -10,22 +10,67 @@ Rio surface and the pcb
 
 maybe this Molex  0901471103 DigiKey Part Number 	
 WM14830-ND
+just use generic 1x3 header footprint
 
+add a duplicate input connector, just for ground & mechanical stability?
 
-latching output connecgtor to mate with molex SL series 3 pin
+----
+
+J2,J3,J4  output to led strips
+
+latching output connector to mate with molex SL series 3 pin
 but right angle pcb male with latching shroud
 
 Molex 0705550002 DigiKey Part Number WM4165-ND
+      downloaded footprint from digikey, in project library
+--
 
+J5 power input connector 
+Wago Cage Clamp series 2601
+2601-1102
+#1102  for two pole
 
+--
 
-board size?
-make it possible to fit a NavX onto the roborio while using the pwm led
-interface board?
+onboard voltage regulator
+wanted a SOT-223 part, but there really aren't any?
+
+LM1117MP-5.0  SOT-223, 800mA
+	      no, minimum 1.1v dropout at 100mA.  still needs large output cap.
+
+or, go SOIC-8 LM2931-5.0MX, Ti
+        datasheet says it really needs 100uf output cap for 100mA
+	very sensitive to ouput cap ESR
+	     worst case is minimum temperature, max current
+	     only 47uf if temp is 25C minimum, less if tantalum
+	     ok, add a tantalum output cap, don't think I have any SMT ones.
+	     "ESR is critical"
+	     	     0.05 ohm to 0.6 ohm
+	nice app note on testing
+	can get 47uF ceramic at 10v in 1206 pkg.  would probably work fine.
+	
+	Samsung CL31A476MPHNNNE
+	DigiKey Part Number
+	1276-3063-1-ND - Cut Tape (CT)	
+	
+	also add another 0805 footprint just for paranoia
+	
+need custom symbol, soic has multiple ground pins?
+     found it in library!   it does the hidden-pin trick too hook up the others.
+
+--
 
 onboard 12v to 5v power converter module - skip it, use external
 
-power input
-Wago Cage Clamp series 2601
-#1102  for two pole
+--
+
+board size?
+make it possible to fit a NavX onto the roborio while using the pwm led
+interface board?  Yes, possible. took pictures.
+
+non-rectangular cutout so most PWM outputs are still usable if plugged into
+PWM0 and PWM1.
+
+
+
 
