@@ -12,7 +12,7 @@ maybe this Molex  0901471103 DigiKey Part Number
 WM14830-ND
 just use generic 1x3 header footprint
 
-add a duplicate input connector, just for ground & mechanical stability?
+add a duplicate input connector, just for ground & mechanical stability? DONE
 
 ----
 
@@ -25,7 +25,7 @@ Molex 0705550002 DigiKey Part Number WM4165-ND
       downloaded footprint from digikey, in project library
 --
 
-J5 power input connector 
+J5 power input connector
 Wago Cage Clamp series 2601
 2601-1102
 #1102  for two pole
@@ -35,10 +35,11 @@ Wago Cage Clamp series 2601
 onboard voltage regulator
 wanted a SOT-223 part, but there really aren't any?
 
-LM1117MP-5.0  SOT-223, 800mA
+LM1117MP-5.0  SOT-223, 800mA  ?
 	      no, minimum 1.1v dropout at 100mA.  still needs large output cap.
 
 or, go SOIC-8 LM2931-5.0MX, Ti
+    LM2931MX-5.0/NOPBCT-ND - Cut Tape (CT)
         datasheet says it really needs 100uf output cap for 100mA
 	very sensitive to ouput cap ESR
 	     worst case is minimum temperature, max current
@@ -47,16 +48,29 @@ or, go SOIC-8 LM2931-5.0MX, Ti
 	     "ESR is critical"
 	     	     0.05 ohm to 0.6 ohm
 	nice app note on testing
+need custom symbol, soic has multiple ground pins?
+     found it in library!   it does the hidden-pin trick too hook up the others.
+
 	can get 47uF ceramic at 10v in 1206 pkg.  would probably work fine.
-	
 	Samsung CL31A476MPHNNNE
 	DigiKey Part Number
 	1276-3063-1-ND - Cut Tape (CT)	
 	
 	also add another 0805 footprint just for paranoia
-	
-need custom symbol, soic has multiple ground pins?
-     found it in library!   it does the hidden-pin trick too hook up the others.
+
+input side ceramic caps
+      1276-2928-1-ND  1uF 50v
+or
+	      1276-6736-1-ND  10uF 35v
+
+
+--
+
+power input back-diode
+
+SBR3U60P1-7DICT-ND
+Diodes Incorporated SBR3U60P1-7
+DIODE SBR 60V 3A POWERDI123 
 
 --
 
@@ -71,6 +85,23 @@ interface board?  Yes, possible. took pictures.
 non-rectangular cutout so most PWM outputs are still usable if plugged into
 PWM0 and PWM1.
 
+---
 
+confirming what LEDs work
 
+I have SK6... from adafruit
 
+what data rate does the roborio generate?
+
+https://www.revrobotics.com/rev-11-1198/
+	specifies WS2812B
+rev blinkin module 		specifies WS2812
+
+---
+
+consider this spool of led strip
+
+https://www.amazon.com/dp/B088B9QWHT/ref=sspa_dk_detail_4?pd_rd_i=B088B9QWHT&pd_rd_w=ka7h7&content-id=amzn1.sym.386c274b-4bfe-4421-9052-a1a56db557ab&pf_rd_p=386c274b-4bfe-4421-9052-a1a56db557ab&pf_rd_r=0V4FH9YB97GJAH5QF569&pd_rd_wg=xPIcj&pd_rd_r=cfca4918-af50-4b79-a1fa-4257d51aef52&s=hi&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM&th=1
+
+90 watts per spool / 300 leds per spool 16.4 feet "IP65"
+   coating or not?
