@@ -1,4 +1,53 @@
-22453006262785141
+22464910120631303
+0steve-footprints
+B3F4100
+B3F-4100-1
+Switch
+0
+5
+5
+0steve-footprints
+Harwin_M20-7810845_Vert_evenodd
+Harwin Female Vertical Surface Mount Double Row 2.54mm (0.1 inch) Pitch PCB Connector, M20-7810845, 8 Pins per row (https://cdn.harwin.com/pdfs/M20-781.pdf), generated with kicad-footprint-generator
+connector Harwin M20 side entry
+0
+16
+16
+0steve-footprints
+MountingHole_0.25hex_4-40
+Mounting Hole 3.2mm, M3
+mounting hole 3.2mm m3
+0
+1
+1
+0steve-footprints
+SMA_Johnson_142-0701-201_Vertical
+https://www.amphenolrf.com/downloads/dl/file/id/3406/product/2975/132134_11_customer_drawing.pdf
+SMA THT Female Jack Vertical ExtendedLegs
+0
+5
+2
+0steve-footprints
+SMA_Johnson_142-0701-301_RightAngle
+https://www.amphenolrf.com/downloads/dl/file/id/3406/product/2975/132134_11_customer_drawing.pdf
+SMA THT Female Jack Vertical ExtendedLegs
+0
+5
+2
+0steve-footprints
+SPDT-ESwitch-100SP3-M2
+SPDT Toggle Switch E-Switch 100 Series M2 pcb tail 
+SPDT Switch E-Switch 100 SP3 M2
+0
+3
+3
+0steve-footprints
+SPDT-slide-2.54
+Through hole straight pin header, 1x03, 2.54mm pitch, single row
+Through hole pin header THT 1x03 2.54mm single row
+0
+3
+3
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
