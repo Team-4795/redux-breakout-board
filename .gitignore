@@ -52,3 +52,4 @@ fp-info-cache# Netlist files (exported from Eeschema)
 *.dsn
 *.ses
 *.lck
+/kicad/fp-info-cache
