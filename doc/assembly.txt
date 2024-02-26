@@ -1,0 +1,131 @@
+
+Assembling the rio-rgb-LED buffer board
+
+
+Print out the assembly drawing, and use it for reference to parts
+and orientation.
+Especially because:
+      pin 1 of U1 is not marked at all on the board silkscreen
+      there's a silkscreen "1" near the WS2812 RGB-LED that is confusingly
+      	      not near the actual pin 1.
+
+
+locate and unpack three  1 uF 50v 0805-size surface mount capacitors
+
+using a tiny soldering iron tip, apply a dab of solder to one pad only of each of the C1, C2, and C3 locations
+
+place a 1 uF, 50v 0805 capacitor at each of C1, C2, and C3
+for each one:
+    reheat the pad that already has solder while using tweezers to push the
+    component into the perfect location
+
+When all three have one end soldered, to hold the part in place, go
+back and solder the other end.  Reheat the first end to touch it up.
+Use only a tiny bit of solder if necessary.
+
+--
+
+Repeat for C4, 47uF 10v, 1206
+  - apply solder to one pad only
+  - put the parts in place
+  - reheat the already-applied solder while holding the part in place.  adjust as needed to get the part into the perfect position.
+  - go back and solder the other end.  Touch
+
+--
+
+Repeat for the three 100 ohm 0805 resistors at R1, R2, and R3
+ - apply solder to one pad only
+ - place parts
+ - reheat the solder to anchor the part in place
+ 
+--
+
+Locate D2, the reverse-polarity protection diode.  Notice that it has
+one lead that is larger than the other, matching the lands pads on the
+board.	 
+Same procedure:
+     - Apply solder to one pad only
+     - put the part in place
+     - reheat that pad, positioning the part
+     - solder the other end.
+
+When soldering the larger pad, keep the iron there and apply enough
+solder that it gets sucked underneat the device to connect the whole
+device lead and board pad.
+
+
+Locate U1, the voltage regulator in the 8-pin SOIC package.  Check the
+orientation.  Pin 1, marked with a small dimple, goes towards C3.  Its
+marked with a diagonal line on the assembly drawing.
+
+Same soldering procedure:
+     - Apply solder to one pad only
+     - put the part in place
+     - reheat that pad, positioning the part perfectly so that all 7 other
+       leads are in perfect position over their respective pads.
+     - TRIPLE-CHECK the position and orientation of the part.
+ After this step, it will be very hard to reposition the part!!
+      - solder the 7 other leads.
+
+--
+
+The voltage regulator part of the circuit can be tested at this point,
+Worth doing, even though its a little tricky to hold the input wires
+and voltmeter probes all in place.  I did this on the first board to
+be assembled.
+
+--
+
+Locate D1, the WS2812B RGB "smart" LED.
+Using the assembly drawing only, identify where pin 1 of the LED goes.
+Pin 1 on the package is marked by a diagonal shape in the corner of the white
+plastic package.
+
+Using a tiny soldering iron tip, apply a dab of solder to one pad
+only.  Position the WS2812B in the right place.  Hint: the triangle
+goes towards C4.
+
+reheat the pad with the solder to anchor the part in place, while
+positioning it perfectly so the other three pads line up well.
+
+Check orientation of pin 1 (triangle) again.
+
+solder the other three pads.
+reheat the first pad to clean it up, adding a tiny bit of solder if needed.
+
+--
+
+Surface mount parts should all be finished!
+
+Incremental final testing:
+
+install J1, data input
+-  put the J1 connector on the BACK side of the board.
+  solder one pin only.
+  Holding the connector and board with one hand, finger on the connector,
+  reheat that one pin's solder joint.  reposition the connector so it is perfectly flat to the surface of the board, and is perfectly perpendicular to the board
+  surface.
+  solder the other pins
+
+--
+
+now apply rgb-led data stream along with +5v or +6v to J1 with a
+roborio or a short cable and an ardino.
+
+--
+
+Solder in J2..J4 output connectors.
+
+We need to find a way to anchor them down a little better:  the plastic
+mounting pins fit nicely while soldering, but could pull out.
+Maybe melting them a bit with a low-temperature soldering iron
+would be enough.  Or maybe a bit of glue.  careful not to get glue where it
+doesn't belong.
+
+Solder in J5, power input wago lever-lock connector.  orange levers for wires
+go towards the board edge.
+
+---
+
+test whe whole thing on RoboRIO or on bench with arduino data source
+
